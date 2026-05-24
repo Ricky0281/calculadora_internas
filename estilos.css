@@ -1,0 +1,291 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffffff, #eef7ff);
+  color: #08265c;
+  overflow-x: hidden;
+}
+
+.fondo-azul {
+  position: fixed;
+  width: 360px;
+  height: 700px;
+  background: linear-gradient(180deg, #003b8f, #006fd6);
+  left: -220px;
+  top: 100px;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.fondo-naranja {
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  background: linear-gradient(135deg, #ffb703, #ff6b00);
+  right: -250px;
+  bottom: -220px;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.encabezado {
+  max-width: 1200px;
+  margin: 25px auto 20px;
+  padding: 0 25px;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.logo {
+  width: 260px;
+  height: auto;
+}
+
+h1 {
+  margin: 0;
+  font-size: 42px;
+  color: #003b8f;
+  text-align: center;
+  font-weight: bold;
+}
+
+.firma {
+  margin: 8px 0 0;
+  text-align: center;
+  font-weight: bold;
+  color: #ff7a00;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-style: italic;
+}
+
+.linea {
+  width: 110px;
+  height: 5px;
+  margin: 15px auto 0;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #ffb703 50%, #006fd6 50%);
+}
+
+.contenedor {
+  max-width: 1200px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 35px;
+  border-radius: 25px;
+  box-shadow: 0 15px 35px rgba(0, 47, 108, 0.18);
+}
+
+.formulario {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr 1fr;
+  gap: 22px;
+  align-items: end;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.campo.grande {
+  grid-column: span 1;
+}
+
+label {
+  font-weight: bold;
+  color: #003b8f;
+  font-size: 15px;
+}
+
+input,
+select {
+  width: 100%;
+  height: 54px;
+  padding: 0 18px;
+  border-radius: 10px;
+  border: 1px solid #c8d4e3;
+  font-size: 16px;
+  color: #08265c;
+  background: white;
+  outline: none;
+  transition: 0.2s;
+}
+
+input:focus,
+select:focus {
+  border-color: #006fd6;
+  box-shadow: 0 0 0 3px rgba(0, 111, 214, 0.15);
+}
+
+#precio {
+  font-weight: bold;
+  background: #eef7ff;
+  color: #003b8f;
+}
+
+#buscador {
+  height: 46px;
+  max-width: 500px;
+}
+
+#descripcion {
+  width: 100%;
+  min-width: 620px;
+}
+
+.btn {
+  height: 54px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+}
+
+.azul {
+  background: linear-gradient(135deg, #003b8f, #006fd6);
+}
+
+.amarillo {
+  background: linear-gradient(135deg, #ffb703, #ffca3a);
+  color: #003b8f;
+}
+
+.naranja {
+  background: linear-gradient(135deg, #ff7a00, #ff4d00);
+}
+
+.tabla-contenedor {
+  margin-top: 30px;
+  overflow-x: auto;
+  border-radius: 14px;
+  border: 1px solid #c8d4e3;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+}
+
+th {
+  background: linear-gradient(135deg, #003b8f, #005bbd);
+  color: white;
+  padding: 16px;
+  font-size: 15px;
+}
+
+td {
+  padding: 16px;
+  border-bottom: 1px solid #dbe7f5;
+  background: #f4f9ff;
+  color: #08265c;
+}
+
+tr:hover td {
+  background: #e6f2ff;
+}
+
+tr.seleccionado td {
+  background: #d7ebff;
+  font-weight: bold;
+}
+
+td button {
+  background: linear-gradient(135deg, #ef233c, #d90429);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.total-box {
+  width: 360px;
+  margin: 28px 0 0 auto;
+  background: #eef7ff;
+  border: 1px solid #b8d7ff;
+  border-radius: 14px;
+  padding: 22px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #003b8f;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
+
+.total-box span {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.total-box strong {
+  font-size: 34px;
+}
+
+footer {
+  margin: 25px auto;
+  text-align: center;
+  color: #003b8f;
+  font-weight: bold;
+}
+
+footer img {
+  width: 70px;
+  display: block;
+  margin: auto;
+}
+
+footer p {
+  margin: 5px 0 0;
+}
+
+@media (max-width: 1100px) {
+
+  #descripcion {
+    min-width: 100%;
+  }
+
+}
+
+@media (max-width: 900px) {
+
+  .encabezado {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .logo {
+    width: 220px;
+  }
+
+  .formulario {
+    grid-template-columns: 1fr;
+  }
+
+  .total-box {
+    width: 100%;
+  }
+
+  #descripcion {
+    min-width: 100%;
+  }
+
+}

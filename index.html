@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora Pago GDO</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <div class="fondo-azul"></div>
+  <div class="fondo-naranja"></div>
+
+  <header class="encabezado">
+    <img src="Condugas.png" alt="Logo Condugas" class="logo">
+    <div>
+      <h1>CALCULO INTERNA</h1>
+<p class="firma">By Ricky</p>
+      <div class="linea"></div>
+    </div>
+  </header>
+
+  <main class="contenedor">
+
+    <section class="formulario">
+
+      <div class="campo grande">
+        <label>Buscar ítem</label>
+        <input type="text" id="buscador" placeholder="Escribe para filtrar: aco, centro, válvula...">
+      </div>
+
+      <div class="campo grande">
+        <label>Descripción</label>
+        <select id="descripcion">
+          <option value="">Seleccione un ítem</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label>Cantidad</label>
+        <input type="number" id="cantidad" min="1" placeholder="Cantidad">
+      </div>
+
+      <div class="campo">
+        <label>Precio unitario</label>
+        <input type="text" id="precio" readonly>
+      </div>
+
+      <button class="btn azul" onclick="agregar()">Agregar</button>
+      <button class="btn amarillo" onclick="limpiarCampos()">Limpiar</button>
+      <button class="btn azul" onclick="corregir()">Corregir</button>
+      <button class="btn naranja" onclick="nuevoCalculo()">Nuevo cálculo</button>
+
+    </section>
+
+    <section class="tabla-contenedor">
+      <table>
+        <thead>
+          <tr>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Subtotal</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody id="tabla"></tbody>
+      </table>
+    </section>
+
+    <div class="total-box">
+      <span>TOTAL:</span>
+      <strong id="total">$ 0</strong>
+    </div>
+
+  </main>
+
+  <footer>
+    <img src="Condugas.png" alt="Logo Condugas">
+    <p>CONDUGAS S.A. INGENIERÍA</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
